@@ -1,0 +1,182 @@
+body {
+	/*font-family: 'Roboto Condensed', sans-serif;*/
+	font-family: BlinkMacSystemFont, sans-serif;
+	padding-top:31px;
+	color:#002266;
+}
+
+
+.list-group {
+	margin-bottom: 0;
+	padding-right:15px;
+	padding-left:15px;
+}
+.padding-rl {
+	padding-left: 80px;
+	padding-right: 80px;
+}
+a:hover, a:focus {
+	text-decoration: none;
+}
+.dropdown-menu {
+	background-image: linear-gradient(to bottom, #003cb3 0%, #002266 100%);
+
+}
+.dropdown-menu > li > a {
+	color:white;
+}
+
+
+
+/* Carousel fixed height*/
+.carousel-inner > .item > img{
+	height:500px;
+}
+
+/* Typography style*/
+.dropdown-header-bold{
+	font-weight: bold !important;
+}
+
+
+.carousel-header {
+	font-size: 40px;
+	
+}
+.section-header {
+	text-align: center;
+	font-size:30px;
+	font-weight: bold;
+
+}
+
+
+/* All about alignment*/
+.align-center {
+	text-align:center;
+}
+
+.padding-right-0 {
+	padding-right:0;
+	padding-left:0;
+}
+
+section {
+	padding-top:20px;
+	
+}
+h5, h6 {
+	margin:2px;
+}
+.carousel-caption {
+	bottom:5px;
+}
+
+/* all about star rating */
+
+
+.star {
+	color: #ffcc00;
+}
+
+.star-border {
+	color: #808080;
+}
+
+/* all about thumbnail */
+a.thumbnail:hover,
+a.thumbnail:focus {
+  border-color: #002266
+}
+.thumb-foot {
+	text-align: center;
+	color:#002266 !important;
+}
+
+
+
+
+
+
+/* All about footers */
+footer {
+	padding:50px;
+	background: rgba(0,0,0,0.2);
+	width:100%;
+	margin-top:20px;
+
+}
+
+/* Media query for Desktop and Larger screen size*/
+@media only screen and (min-width:768px){
+	.ul-list{
+		float:right;
+	}
+	.navbar-toggle {
+		background: transparent !important;
+	}
+
+}
+
+/* Media query for Mobile and Tablet Screen Size*/
+@media only screen and (max-width: 768px){
+	.caret {
+		text-align: right;
+	}
+
+	.dropdown-menu > li > a:hover {
+		color: #003cb3 !important;
+		background: white;
+	}
+	.dropdown-menu > li > a {
+		color:white !important;
+		background: #002266;
+	}
+	.navbar-toggle {
+		background: transparent !important;
+	}
+	#myCarousel img {
+		height:250px;
+	}
+	.carousel-header {
+		font-size:20px;
+	}
+	.carousel-caption {
+		bottom:-10px;
+	}
+
+}
+
+
+/* Media query only for Mobile devices*/
+@media only screen and (max-width: 480px){
+	.row {
+	margin-left: 0;
+	margin-right: 0;
+	}
+	.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12
+	{
+		padding-left:0;
+		padding-right:0;
+	}
+	.carousel-header {
+		display: none;
+	}
+	.section-header {
+		font-size: 20px;
+	}
+	.thumb-foot {
+		font-size:15px;
+	}
+	footer h4 {
+		font-size: 15px;
+	}
+	.list-group h4 {
+		font-size: 15px;
+	}
+}
+
+
+
+
+
