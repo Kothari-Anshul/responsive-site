@@ -52,7 +52,12 @@
 				        </ul>
 				      </li>
 				      <li><a href="#">SUPPORT</a></li>
-				      <li><a href="#">FEEDBACK</a></li>
+				      <li>
+				      	<!-- Button trigger modal -->
+  							<a data-toggle="modal" href="#myModal">FEEDBACK</a>
+
+  
+				      </li>
 				    </ul>
 			    
 			    
@@ -115,7 +120,7 @@
 		  			Unique Features
 		  		</h3>
 		  		
-		  		<ul class="col-md-12 list-group">
+		  		<ul class="container col-md-12 list-group">
 		  			<li class="row list-group-item align-center">
 		  				<div class="col-md-3"> &nbsp; </div>
 		  				<div class=" padding-rl col-md-6" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
@@ -247,6 +252,34 @@
 			  		</div>
 			  	</div>
 		</footer>
+		<!-- Modal -->
+	  	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		          <h4 class="modal-title text-center">WE VALUE YOUR FEEDBACK</h4>
+		        </div>
+		        <div class="modal-body">
+		        	<form role="form">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">Comments</label>
+					    <textarea class="form-control" rows="10"></textarea>
+					  </div>
+					  <div class="text-center">
+					  	<button type="submit" class="btn btn-primary">Send</button>
+					  </div>
+					  
+					</form>
+		        </div>
+		        
+		      </div><!-- /.modal-content -->
+		    </div><!-- /.modal-dialog -->
+	  	</div><!-- /.modal -->
 
 		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
