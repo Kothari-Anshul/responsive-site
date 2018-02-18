@@ -1,4 +1,7 @@
-function is_palindrome(n){
+function is_palindrome(){
+	var n = parseInt(document.getElementById("palin_num").value);
+	var output = document.getElementById("is_palin");
+	output.innerHTML = " ";
 	var reverse = 0;
 	var copy  = n;
 	while(n > 0){
@@ -10,9 +13,8 @@ function is_palindrome(n){
 	}
 	
 	if(reverse == copy){
-		document.write(" "  + copy  + " ------> Kudos! it is palindrome ");
+		output.innerHTML = " "  + copy  + " ------> Kudos! it is palindrome ";
 	}else {
-		document.write(" " + copy+ "----->  Sorry! not a palindrome, try another one ");
+		output.innerHTML = " " + copy+ "----->  Sorry! not a palindrome, try another one ";
 	}
 }
-is_palindrome(55);

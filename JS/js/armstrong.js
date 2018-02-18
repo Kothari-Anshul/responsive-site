@@ -1,5 +1,10 @@
 /* function to check three digit number to be armstrong number or not*/
-function is_armstrong(n){
+function is_armstrong(){
+	var input = document.getElementById("arm_num");
+	var output = document.getElementById("is_arm");
+	
+	var n = parseInt(input.value);
+	
 	var result = 0;
 	var copy = n;
 	while(n > 0){
@@ -8,10 +13,9 @@ function is_armstrong(n){
 		n = Math.floor(n/10);
 	}
 	if(copy == result){
-		document.write("Yes it is armstrong number" + "The number given to me was: " + copy);
+		output.innerHTML = "Yes it is armstrong number" + "The number given to me was: " + copy ;
 
 	}else{
-		document.write("No you are trying to fool me, it is not armstrong number. Please change it soon!");
+		output.innerHTML = "No , it is not armstrong number. Please change it soon!";
 	}
 }
-is_armstrong(153);
