@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head lang = "en">
+		<title>
+			Search Repo
+		</title>
+		<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src = "js/script.js"></script>
+
+	</head>
+	<body id = "body" onload = "display_JSON()">
+		
+		<div class="container">
+			<h1 style="text-align: center;">Large Collection of Repository</h1>
+			<table id = "json_table" class = "table-responsive table-striped" >
+				<tr > 
+					<th>URL</th>
+					<th>ISSUE_COUNT</th>
+					<th>BRANCHES</th>
+					<th>CONTRIBUTORS</th>
+					<th>STAR</th>
+					<th>COMMIT</th>
+					<th>WATCHERS</th>
+				</tr>
+			</table>
+
+			<br><br>
+			
+			<input type="text" id="url" class = "form-control" placeholder = "Enter the URL of Repository to get the details">
+			<div class="text-center">
+				<input type="button" value = "GO" class = "btn btn-success"onclick= "search()">
+			</div>
+			<p id="result"></p>
+		</div>
+	
+	</body>
+</html>
