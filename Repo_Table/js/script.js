@@ -2,6 +2,8 @@ var content = "";
 var repo_array;
 function display_JSON(){
 	var table = document.getElementById("json_table");
+	
+	
 	str = "";
 	readTextFile();
 	
@@ -34,7 +36,12 @@ function readTextFile()
 
 function search(){
 	var url = document.getElementById("url").value;
+
+	var dropdown = document.getElementById("dropdown");
+	var col = dropdown.options[dropdown.selectedIndex].value;
+
 	var result = document.getElementById("result");
+
 	var str = "";
 	if(isValid(url) == false){
 		result.innerHTML= "Please Enter a Valid URL to Search ";
@@ -42,12 +49,10 @@ function search(){
 	else{
 		for(i in repo_array){
 			if(url == repo_array[i]["url"]){
-				for(keys in repo_array[i]){
-					str += "  " + repo_array[i][keys]  + "  "; 
-				}
+				str = repo_array[i][col];
 			}
 		}
-		result.innerHTML = str;
+		result.innerHTML = " Total "  + col + " of the repository " + url + " is  : " + str;
 	}
 }
 function isValid(url){
