@@ -15,6 +15,21 @@
 		
 		<div class="container">
 			<h1 style="text-align: center;">Large Collection of Repository</h1>
+
+			<input type="text" id="url" class = "form-control" placeholder = "Enter the URL of Repository to get the details">
+			<select  id="dropdown" class =  "">
+				<option value = "issue_count">Issue Count</option>
+				<option value = "branches">Branches</option>
+				<option value = "contributors">Contributors</option>
+				<option value = "star">Star</option>
+				<option value = "commit">Commit</option>
+				<option value = "watchers">Watchers</option>
+			</select>
+			<div class="text-center">
+				<input type="button" value = "GO" class = "btn btn-success"onclick= "search()">
+			</div>
+			<p id="result"></p>
+			<br><br>
 			<table id = "json_table" class = "table-responsive table-striped" >
 				<tr > 
 					<th>URL</th>
@@ -29,19 +44,7 @@
 
 			<br><br>
 			
-			<input type="text" id="url" class = "form-control" placeholder = "Enter the URL of Repository to get the details">
-			<select  id="dropdown" class = "btn btn-primary">
-				<option value = "issue_count">Issue Count</option>
-				<option value = "branches">Branches</option>
-				<option value = "contributors">Contributors</option>
-				<option value = "star">Star</option>
-				<option value = "commit">Commit</option>
-				<option value = "watchers">Watchers</option>
-			</select>
-			<div class="text-center">
-				<input type="button" value = "GO" class = "btn btn-success"onclick= "search()">
-			</div>
-			<p id="result"></p>
+			
 		</div>
 	
 	</body>

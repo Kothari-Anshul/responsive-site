@@ -47,12 +47,19 @@ function search(){
 		result.innerHTML= "Please Enter a Valid URL to Search ";
 	}
 	else{
+		var flag = false;
 		for(i in repo_array){
 			if(url == repo_array[i]["url"]){
 				str = repo_array[i][col];
+				flag = true;
 			}
 		}
-		result.innerHTML = " Total "  + col + " of the repository " + url + " is  : " + str;
+		if(flag == true){
+			result.innerHTML = " <h3> " +  col.toUpperCase() + " : "+ str  + " </h3>";
+		}else {
+			result.innerHTML = "<h3 style = 'color:red;'> DATA NOT FOUND! </h3>"
+		}
+		
 	}
 }
 function isValid(url){
