@@ -51,14 +51,28 @@ function read_file(){
 
 		lr.on('end', function () {
 			fileRead++;
+			
 			if(fileRead == 3){
-				for(key in dict){
-					console.log(key + "--->" + dict[key]);
-				}
 				
-				for(key in edu_category){
-					console.log(key + "---->" + edu_category[key]);
-				}
+				
+				/* Create first file to plot for i.e agegroup versus number of literate persons*/
+				var fs = require('fs');
+				fs.writeFile("plot1.json", JSON.stringify(dict), function(err) {
+	    		if(err) {
+	        		return console.log(err);
+	    		}
+
+	    		
+				}); 
+				/* Create second file to plot for category versus number of literate persons*/
+				var fs = require('fs');
+				fs.writeFile("plot2.json", JSON.stringify(edu_category), function(err) {
+	    		if(err) {
+	        		return console.log(err);
+	    		}
+
+	    		
+				}); 
 			}
 
 		});
