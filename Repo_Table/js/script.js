@@ -3,8 +3,9 @@ var repo_array;
 function display_JSON(){
 	var table = document.getElementById("json_table");
 	
-	
-	str = "";
+	var urlList = document.getElementById("url");
+	var url_str = "";
+	var str = "";
 	readTextFile();
 	
 	repo_array = JSON.parse(content);
@@ -13,6 +14,10 @@ function display_JSON(){
 
 		for (key in repo_array[i]){
 			str += "<td>" + repo_array[i][key] + "</td>";
+			if(key == "url"){
+				//url_str = url_str + "<option>" + repo_array[i]["url"] + "</option>"
+				url_str += "<option value = '" + repo_array[i]["url"]  + "'>"
+			}
 			
 		}
 
@@ -20,7 +25,10 @@ function display_JSON(){
 		
 	}
 	table.innerHTML += str;
+
+	/* Display URL dropdown also*/
 	
+	urlList.innerHTML = url_str;
 	
 }
 function readTextFile()
@@ -35,7 +43,8 @@ function readTextFile()
 }
 
 function search(){
-	var url = document.getElementById("url").value;
+	var url = document.getElementById("searchfor").value;
+	//var url = url_list.options[url_list.selectedIndex].innerHTML;
 
 	var dropdown = document.getElementById("dropdown");
 	var col = dropdown.options[dropdown.selectedIndex].value;
